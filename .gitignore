@@ -1,0 +1,10 @@
+node_modules
+.vscode
+.tmp
+.cache
+.editorconfig
+.eslintignore
+.eslintrc
+.strapi-updater.json
+.env
+.DS_store
