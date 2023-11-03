@@ -8,3 +8,4 @@ node_modules
 .strapi-updater.json
 .env
 .DS_store
+package-lock.json
