@@ -72,4 +72,14 @@ build
 ########################
 /build
 config/env
+
+#########################
+# frontend
+#######################
+.vercel
+.env.local
+.DS_store
+node_modules
+.vscode
 frontend/public/uploads
+.next
