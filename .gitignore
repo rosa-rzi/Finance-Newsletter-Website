@@ -72,4 +72,4 @@ build
 ########################
 /build
 config/env
-frontend/public/PRIVACY_POLICY.pdf
+frontend/public/documents/PRIVACY_POLICY.pdf
