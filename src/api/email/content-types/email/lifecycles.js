@@ -38,13 +38,14 @@ module.exports = {
                             .header {
                                 background-color: #ffffff;
                                 display: flex;
+                                align-items: center;
                                 border-bottom: 1px solid #ccc;
                                 margin-top: 20px;
                                 margin-bottom: 20px;
                             }
                             .name {
                                 font-size: 18px;
-                                margin: 10px 0px;
+                                margin: 0px 5px;
                                 color: #373840;
                             }
                             .title {
@@ -114,13 +115,12 @@ module.exports = {
                             <div class="description">${description}</div>
                             <img class="image" src="${imageUrl}" alt="Newsletter Image">
                             <div class="body">${formattedBody}</div>
-                            <a href="${articleUrl}" class="button">Link Button</a>
+                            <p href="${articleUrl}" class="button">Keep reading</p>
                             <div class="footer"> You are subscribed to receiving emails from The WallStreet Raven - Unsubscribe</div>
                         </div>
                     </body>
                     </html>`}
                 )
-                // console.log('sent');
             } catch (e) {
                 console.log("Error sending email: " + e);
             }

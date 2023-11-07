@@ -22,8 +22,8 @@ module.exports = ({ env }) => ({
         apiKey: env('BREVO_API_KEY'),
       },
       settings: {
-        defaultFrom: 'rosa.rezaei17@gmail.com',
-        defaultReplyTo: 'rosa.rezaei17@gmail.com',
+        defaultFrom: env('FROM_EMAIL'),
+        defaultReplyTo: env('FROM_EMAIL'),
       },
     },
   },

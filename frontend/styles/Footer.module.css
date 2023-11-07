@@ -1,0 +1,31 @@
+.footer {
+    border-top: 1px solid #eaeaea;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+}
+
+
+.footer span {
+    color: #ffff;
+}
+
+.footer a {
+    color: #9CA3AF;
+    margin: 10px;
+}
+
+@media (max-width: 700px) {
+    .footer {
+        bottom: 0;
+        width: 100%;
+        position: relative;
+        display: inline-grid;
+    }
+
+    .footer a {
+        color: #9CA3AF;
+        margin: 2px;
+    }
+}
