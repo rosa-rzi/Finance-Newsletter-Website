@@ -48,7 +48,7 @@ export default function Home({data}) {
     id: "email-form-1",
     __component: "email-form",
     title: "The Wall St. Raven",
-    description: `Digestible coverage of stocks, economics, investing, and trade ideas for everyday people and professionals.`,
+    description: `Free digestible coverage of stocks, economics, investing, and trade ideas for everyday people and professionals.`,
     emailPlaceholder: "Enter your email",
     submitButton: {
       text: "Subscribe"
