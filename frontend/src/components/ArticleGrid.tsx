@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function ArticleGrid({title, date, description, imageUrl, slug}) {
     return (
-        <Link href={"/posts/" + slug} className={styles.card} target="_blank" rel="noopener noreferrer">
+        <Link href={"/posts/" + slug} className={styles.card}>
             {imageUrl && (
                 <Image
                   alt="presentation"
