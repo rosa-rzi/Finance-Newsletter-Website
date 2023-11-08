@@ -21,12 +21,12 @@ function Footer({
             <span>
                 ©2023 All Rights Reserved
             </span>
-            <a href="../../public/PRIVACY_POLICY.pdf"
+            <a href="../../public/documents/PRIVACY_POLICY.pdf"
             target="_blank"
             rel="noopener noreferrer">
                 Privacy Policy
             </a>
-            <a
+            <a href="../../public/documents/TERMS_OF_USE.pdf"
             target="_blank"
             rel="noopener noreferrer">
                 Terms of Use
