@@ -1,5 +1,4 @@
 const sanitizeHtml = require('sanitize-html')
-
 // This file contains  the email content
 module.exports = {
     async afterCreate(event) {
@@ -13,13 +12,13 @@ module.exports = {
             fields: [`subscriber_email`],
         });
         const logoUrl = "https://res.cloudinary.com/dfbgn4spk/image/upload/v1697612263/logo_raven_22ae3cedce.png";
-        const articleUrl = result.article;
-
+        const twitterIcon= "https://res.cloudinary.com/dfbgn4spk/image/upload/v1699386345/twitter_1_d2b142262c.png";
+        const articleUrl = `https://wallstraven.com/posts/${result.slug}`;
         emails.forEach( async email => {
             try {
                 await strapi.plugins['email'].services.email.send(
                     {to: `${email.subscriber_email}`,
-                    from: 'rosa.rezaei17@gmail.com',
+                    from: `${process.env.FROM_EMAIL}`,
                     subject: `${title}`,
                     html: `<!DOCTYPE html>
                     <html>
@@ -38,7 +37,6 @@ module.exports = {
                             .header {
                                 background-color: #ffffff;
                                 display: flex;
-                                align-items: center;
                                 border-bottom: 1px solid #ccc;
                                 margin-top: 20px;
                                 margin-bottom: 20px;
@@ -46,6 +44,7 @@ module.exports = {
                             .name {
                                 font-size: 18px;
                                 margin: 0px 5px;
+                                padding-top: 10px;
                                 color: #373840;
                             }
                             .title {
@@ -72,6 +71,11 @@ module.exports = {
                                 width: 50px;
                                 height: 50px;
                                 border-radius: 50%;
+                                margin-bottom: 10px;
+                            }
+                            .twitterIcon {
+                                width: 25px;
+                                height: 25px;
                                 margin-bottom: 10px;
                             }
                             .button {
@@ -111,12 +115,19 @@ module.exports = {
                                 <img class="logo" src="${logoUrl}" alt="Logo">
                                 <div class="name">The WallStreet Raven</div>
                             </div>
+                            <a href="${articleUrl}" target="_blank"
+                                <p>Read Online</p>
+                            </a>
                             <div class="title">${title}</div>
                             <div class="description">${description}</div>
                             <img class="image" src="${imageUrl}" alt="Newsletter Image">
                             <div class="body">${formattedBody}</div>
-                            <p href="${articleUrl}" class="button">Keep reading</p>
-                            <div class="footer"> You are subscribed to receiving emails from The WallStreet Raven - Unsubscribe</div>
+                            <a href="https://wallstraven.com/articles" class="button">Keep reading</a>
+                            <div class="footer"> You are subscribed to receiving emails from The WallStreet Raven - 
+                                <a href="/unsubscribe">
+                                Unsubscribe
+                                </a>
+                          </div>
                         </div>
                     </body>
                     </html>`}
