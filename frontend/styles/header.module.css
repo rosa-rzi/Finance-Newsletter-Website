@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     width: 100%;
     padding: 1.5rem 1rem 0rem 1rem;
 }
@@ -16,7 +17,7 @@
 
 .logo {
     width: 65px;
-    height: 55px;
+    height: 65px;
     border-radius: 20px;
 }
 
@@ -51,14 +52,10 @@
 
 @media (max-width: 700px) {
     .header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
         padding: 20px;
     }
     
     .btnContainer {
-        align-self: flex-start;
         width: 50%;
     }
 }

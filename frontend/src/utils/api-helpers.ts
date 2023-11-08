@@ -3,6 +3,10 @@ export function getStrapiURL() {
     return `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}`;
 }
 
+export function getFromEmail() {
+    return `${process.env.FROM_EMAIL}`;
+}
+
 export function getNewEmailToken() {
     return  `${process.env.NEXT_PUBLIC_NEW_EMAIL_TOKEN}`;
 }
