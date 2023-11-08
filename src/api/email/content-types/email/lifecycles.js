@@ -43,8 +43,7 @@ module.exports = {
                             }
                             .name {
                                 font-size: 18px;
-                                margin: 0px 5px;
-                                padding-top: 10px;
+                                margin: 10px;
                                 color: #373840;
                             }
                             .title {

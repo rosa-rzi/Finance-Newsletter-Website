@@ -15,8 +15,9 @@ module.exports = createCoreController('api::subscriber.subscriber', ({ strapi })
 
         const subject = "Welcome to The Wall St Raven Newsletter"
         const logoUrl = "https://res.cloudinary.com/dfbgn4spk/image/upload/v1697612263/logo_raven_22ae3cedce.png";
-        const websiteUrl = 'www.WallStRaven.com/articles';
+        const articlesUrl = 'https://wallstraven.com/articles';
         const title = "Thank you for subscribing.";
+        const imgUrl = "https://res.cloudinary.com/dfbgn4spk/image/upload/v1699421009/joshua_mayo_ob_J_Bg2l_Zj_Mg_unsplash_946848ed43.jpg";
         const body = "Welcome to the Wall St Raven! A digestible coverage of stocks, economics, investing, and trade ideas for everyday people and professionals. We aim to provide interesting stories while having the highest possible signal to noise ratio. We hope to be a delightful addition to your daily routine.";
         const closing = "The Wall St Raven"
   
@@ -24,7 +25,7 @@ module.exports = createCoreController('api::subscriber.subscriber', ({ strapi })
         await strapi.service('api::email.email').sendConfirmationEmail({
           to: `${newSubscriberEmail}`,
           from: 'rosa.rezaei17@gmail.com',
-          subject: 'Thank you for Subscribing to The Wall St Raven',
+          subject: `${subject}`,
           html: `<!DOCTYPE html>
           <html>
           <head>
@@ -94,6 +95,11 @@ module.exports = createCoreController('api::subscriber.subscriber', ({ strapi })
                       color: rgb(123, 123, 138);
                       font-size: 15px;
                     }
+                    .image {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 20px;
+                    }
 
                   @media (max-width: 700px) {
                       .container {
@@ -109,8 +115,13 @@ module.exports = createCoreController('api::subscriber.subscriber', ({ strapi })
                       <img class="logo" src="${logoUrl}" alt="Logo">
                       <div class="name">The WallStreet Raven</div>
                   </div>
+                  <a href="${articlesUrl}">
+                    <p>Read some of our previous articles</p>
+                  </a>
                   <div class="title">${title}</div>
                   <div class="body">${body}</div>
+                  <img class="image" src="${imgUrl}"></img>
+                  <p>“Risk no more that you can afford to lose, and also risk enough so that a win is meaningful.” - Ed Seykota</p>
                   <div class="closing">${closing}</div>
               </div>
           </body>
