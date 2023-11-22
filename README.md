@@ -1,18 +1,17 @@
 ## How I created this project:
-- Client-side created with ```Next.js```
-- Server side with ```Strapi``` (CMS based on Node.js)
+- Built with ```Next.js``` and  ```Strapi``` (headless CMS based on Node.js)
 - Image optimization: ```Cloudinary```
 - Email plugin: ```Brevo```
 - Deployed with ```Heroku``` and ```Vercel```
 
 ## How I worked on this project
-I created this project with the goal of adding real-world value and enhancing my financial literacy.
+Read a more in-depth explanation about this project [here](https://rosarezaei.digital/projects/1-wallstraven/)
 
-- I built this app based on requirements from my partner, who has a background in finance.
+- I built this app based on requirements from my friend, who has a background in finance.
 - I worked independently on the backend and frontend
 ## How to navigate this project
 - This application fetches data from Strapi: Examples for the request and data transformation will be added here
-- Dynamic CSS in [slug].js
+- Dynamic routes in [slug].js
 - client side code can be found in /frontend
 ## Why I built the project this way
 - I used a headless CMS to make content management easy and user-friendly for my non-technical partner to use without my help or authentication.
